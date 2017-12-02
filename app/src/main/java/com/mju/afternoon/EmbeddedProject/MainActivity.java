@@ -14,7 +14,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void pressloginbutton(View view) {
-        Intent intent1 = new Intent(this, Signup.class);
+        Intent intent1 = new Intent(this, MenuActivity.class);
         startActivity(intent1);
     }
 

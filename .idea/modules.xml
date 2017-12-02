@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/EmbeddedProject-master.iml" filepath="$PROJECT_DIR$/EmbeddedProject-master.iml" />
+      <module fileurl="file://E:\Android Studio Projects\EmbeddedProject-master\EmbeddedProjectmaster.iml" filepath="E:\Android Studio Projects\EmbeddedProject-master\EmbeddedProjectmaster.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://E:\Android Studio Projects\EmbeddedProject-master\app\app.iml" filepath="E:\Android Studio Projects\EmbeddedProject-master\app\app.iml" />
+    </modules>
+  </component>
+</project>

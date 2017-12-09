@@ -73,7 +73,9 @@ public class MainActivity extends AppCompatActivity {
 
     protected void redirectSignupActivity() {
         //세션연결 성공시 signup으로 넘긴다.
-        startActivity(new Intent(this, KakaoSignupActivity.class));
+        final Intent intent = new Intent(this, KakaoSignupActivity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+        startActivity(intent);
         finish();
     }
 

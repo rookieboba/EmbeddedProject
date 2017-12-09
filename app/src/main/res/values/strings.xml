@@ -1,4 +1,10 @@
 <resources>
     <string name="app_name">EmbeddedProject-master</string>
     <string name="title_activity_maps">Map</string>
+    <string name="title_activity_menu">MenuActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <!--카카오 로그인 네이티브 키-->
+    <string name="kakao_app_key">11b653e485eb71a1f1f8cbb509296c21</string>
 </resources>

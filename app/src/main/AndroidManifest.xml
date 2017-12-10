@@ -39,7 +39,8 @@
             android:label="@string/title_activity_menu" />
         <activity android:name=".KakaoSignupActivity" />
         <activity android:name=".NavermapActivity" />
-        <activity android:name=".BustimeActivity"></activity>
+        <activity android:name=".BustimeActivity" />
+        <activity android:name=".WebViewActivity"></activity>
     </application>
 
 </manifest>

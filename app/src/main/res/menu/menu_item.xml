@@ -4,8 +4,8 @@
         android:title="Map View"
         android:icon="@android:drawable/btn_plus"/>
 
-    <item android:id="@+id/Chat"
-        android:title="Chating"
+    <item android:id="@+id/Weather"
+        android:title="날씨 확인"
         android:icon="@android:drawable/btn_plus"/>
 
     <item android:id="@+id/Bustime"

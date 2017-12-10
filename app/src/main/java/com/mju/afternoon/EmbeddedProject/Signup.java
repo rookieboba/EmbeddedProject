@@ -1,6 +1,7 @@
 package com.mju.afternoon.EmbeddedProject;
 
 import android.content.ContentValues;
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
@@ -33,12 +34,14 @@ public class Signup extends AppCompatActivity {
 
         ContentValues v = new ContentValues();
         v.put(CONTENT_NAME, name.getText().toString());
-        userDB.insert("userdb", null, v);
         v.put(CONTENT_ID, id.getText().toString());
-        userDB.insert("userdb", null, v);
         v.put(CONTENT_PASSWORD, pwd.getText().toString());
         userDB.insert("userdb", null, v);
 
         Toast.makeText(getApplicationContext(), "Insert ok", Toast.LENGTH_LONG).show();
+
+        //회원가입 버튼을 누른 후 다시 로그인 화면으로 이동.
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
     }
 }

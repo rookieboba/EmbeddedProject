@@ -13,6 +13,7 @@ import android.util.Base64;
 import android.util.Log;
 import android.view.View;
 import android.view.inputmethod.InputMethod;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import com.kakao.auth.ISessionCallback;
@@ -99,6 +100,16 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void pressloginbutton(View view) {
+        EditText inputid = (EditText) findViewById(R.id.userid);
+        EditText inputpwd = (EditText) findViewById(R.id.Password);
+
+        if(inputid.length() == 0 || inputpwd.length() == 0) {
+            Toast.makeText(getApplicationContext(), "아이디와 패스워드를 입력해주세요.", Toast.LENGTH_LONG).show();
+            return;
+        }
+
+
+
         Intent intent1 = new Intent(this, MenuActivity.class);
         startActivity(intent1);
     }

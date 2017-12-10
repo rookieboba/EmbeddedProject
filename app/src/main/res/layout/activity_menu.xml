@@ -10,4 +10,5 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="메뉴 엑티비티 구현 예정"/>
+
 </android.support.constraint.ConstraintLayout>

@@ -29,16 +29,23 @@ public class MenuActivity extends AppCompatActivity {
                 //Menu에 있는 MapView 를 누르면 네이버 지도 열기
                 Intent Mapview = new Intent(this, NavermapActivity.class);
                 startActivity(Mapview);
-            case R.id.Chat:
+                break;
+
+            case R.id.Weather:
+                //날씨 확인을 누르면 WebView를 통해 기상청 사이트 출력
+                Intent Weather = new Intent(this, WebViewActivity.class);
+                startActivity(Weather);
+                break;
 
             case R.id.Bustime:
-                //버스 시간표 확인을 누르면 xmlparsing을 통해 셔틀버스 시간표 출력
+                //버스 시간표 확인을 누르면 셔틀버스 시간표 출력
                 Intent busTime = new Intent(this, BustimeActivity.class);
                 startActivity(busTime);
-
-            default: return super.onOptionsItemSelected(item);
+                break;
 
         }
+
+        return super.onOptionsItemSelected(item);
 
     }
 

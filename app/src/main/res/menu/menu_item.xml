@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/viewMap"
+        android:title="Map View"
+        android:icon="@android:drawable/btn_plus"/>
+
+    <item android:id="@+id/Chat"
+        android:title="Chating"
+        android:icon="@android:drawable/btn_plus"/>
+
+    <item android:id="@+id/Bustime"
+        android:title="버스 시간표 확인"
+        android:icon="@android:drawable/btn_plus"/>
+
+</menu>

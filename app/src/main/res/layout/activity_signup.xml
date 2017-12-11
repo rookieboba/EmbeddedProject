@@ -1,50 +1,95 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_signup"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     tools:context="com.mju.afternoon.EmbeddedProject.Signup">
 
-    <TextView
-        android:layout_width="wrap_content"
+  <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="이름"/>
+        android:orientation="vertical"
+        android:padding="20sp">
 
-    <EditText
-        android:id="@+id/inputname"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:hint="Name"/>
+      <ImageView
+          android:layout_width="wrap_content"
+          android:layout_height="72dp"
+          android:layout_gravity="center_horizontal"
+          android:layout_marginBottom="24dp"
+          android:src="@drawable/user_information" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Id"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:hint="이름을 입력해주세요"
+            android:ems="10"
+            android:id="@+id/inputname"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@color/colorButtonChoice"
+            android:layout_alignParentStart="true" />
 
-    <EditText
-        android:id="@+id/inputid"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:hint="Id"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:hint="아이디를 입력해주세요"
+            android:ems="10"
+            android:id="@+id/inputid"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@color/colorButtonChoice"
+            android:layout_alignParentStart="true" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Password"/>
 
-    <EditText
-        android:id="@+id/inputpwd"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:hint="Password"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:hint="비밀번호를 입력해주세요"
+            android:ems="10"
+            android:id="@+id/inputpwd"
+            android:backgroundTint="@color/colorButtonChoice"
+            android:layout_marginTop="10dp"
+            android:layout_alignParentStart="true" />
 
-    <Button
-        android:id="@+id/insertdb"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="signup"
-        android:onClick="InsertDB"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:hint="비밀번호를 다시 입력해주세요"
+            android:ems="10"
+            android:layout_marginTop="10dp"
+            android:id="@+id/signup_input_password_confirm"
+            android:backgroundTint="@color/colorButtonChoice"
+            android:layout_alignParentStart="true" />
 
-</LinearLayout>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="phone"
+            android:ems="10"
+            android:layout_marginTop="10dp"
+            android:hint="핸드폰 번호를 입력해주세요"
+            android:id="@+id/signup_input_phone"
+            android:backgroundTint="@color/colorButtonChoice"
+            android:layout_alignParentStart="true" />
+
+
+        <Button
+            android:text="회원가입 완료"
+            android:layout_width="300sp"
+            android:layout_height="wrap_content"
+            android:id="@+id/insertdb"
+            android:background="@color/colorButtonChoice"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="20sp"
+            android:layout_marginBottom="10sp"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/colorWhite"
+            android:onClick="InsertDB" />
+
+  </LinearLayout>
+
+</ScrollView>

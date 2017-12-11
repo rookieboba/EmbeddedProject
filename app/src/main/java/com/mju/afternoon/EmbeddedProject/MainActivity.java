@@ -3,47 +3,61 @@ package com.mju.afternoon.EmbeddedProject;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageInfo;
-import android.content.pm.PackageInstaller;
 import android.content.pm.PackageManager;
 import android.content.pm.Signature;
-import android.os.Message;
-import android.support.v7.app.AppCompatActivity;
+import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Base64;
 import android.util.Log;
 import android.view.View;
-import android.view.inputmethod.InputMethod;
 import android.widget.EditText;
 import android.widget.Toast;
 
 import com.kakao.auth.ISessionCallback;
 import com.kakao.auth.Session;
 import com.kakao.util.exception.KakaoException;
-import com.kakao.util.helper.log.Tag;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
-import java.util.logging.Logger;
 
 import static com.kakao.util.helper.Utility.getPackageInfo;
 
 public class MainActivity extends AppCompatActivity {
-    private SessionCallback callback;
 
-    @Override
+    private SessionCallback callback;
+    private static MediaPlayer mp;
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-
+        setTitle("MJU SHUTTLE BUS");
         getKeyHash(getApplicationContext());
         callback = new SessionCallback();
         Session.getCurrentSession().addCallback(callback);
+
+        mp=MediaPlayer.create(this,R.raw.maple);
+        mp.setLooping(true);
+        mp.start();
+    }
+    protected void onUserLeaveHint(){
+        mp.pause();
+        super.onUserLeaveHint();
+    }
+    public void onResume(){
+        mp.start();
+        super.onResume();
     }
 
-    @Override
+    public void onBackPressed(){
+        mp.stop();
+        super.onBackPressed();
+    }
+
     protected void onDestroy() {
         super.onDestroy();
         Session.getCurrentSession().removeCallback(callback);
+        mp.stop();
     }
 
     private class SessionCallback implements ISessionCallback {
@@ -117,6 +131,11 @@ public class MainActivity extends AppCompatActivity {
     public void presssignupbutton(View view) {
         Intent intent2 = new Intent(this, Signup.class);
         startActivity(intent2);
+    }
+    public void onClickLogin(View view) {
+
+        Intent login = new Intent(this, FeedReaderContract.class);
+        startActivity(login);
     }
 
 }
